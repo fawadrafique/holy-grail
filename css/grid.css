@@ -1,0 +1,114 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body{
+    background-color: #eeeeee;
+    color: #222831;
+    font-family: 'Roboto Mono', monospace, Arial, Helvetica, sans-serif;
+    font-size: 16px;
+    line-height: 1.5em;
+}
+  
+.grid-container {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr;
+    grid-template-rows: auto;
+    grid-template-areas:
+    "header header header header header header"
+    "navbar navbar navbar navbar navbar navbar"
+    "main main main main main main"
+    "sidebar sidebar sidebar sidebar sidebar sidebar"
+    "footer footer footer footer footer footer"; 
+    grid-gap: 10px;
+    padding: 10px;
+}
+
+
+
+.header{
+    grid-area: header;
+    text-align: center;
+    background-color: #32e0c4;
+    color: #ffffff;
+    line-height: 1.5em;
+    padding: 10px;
+    margin: 20px;
+}
+.header h1{
+    line-height: 1.5em;
+}
+.navbar {
+    grid-area: navbar;
+    margin: 20px;
+}
+.navbar ul{
+    list-style-type: none;
+}
+.navbar li{
+    background-color: #393e46;
+    color: white;
+    margin-bottom: 8px;
+}
+.navbar li:hover{
+    background-color: #222831;
+}
+.navbar a{
+    color: #ffffff;
+    text-decoration: none;
+    font-size: 1em;
+}
+.content {
+    grid-area: main;
+    list-style-position: inside;
+    margin: 20px;
+    padding: 2px;
+}
+.content h3, p{
+    padding-bottom: 15px;
+
+}
+.sidebar {
+    grid-area: sidebar;
+    align-self: flex-start;
+    background-image: url(../images/covid_precautions.gif);
+    background-position: top center;
+    background-position-y: 3%;
+    background-repeat: no-repeat;
+    background-color: #393e46;
+    color: white;
+    margin: 20px;
+    padding: 2px;
+    list-style-position: inside;
+}
+.sidebar h4{
+    text-align: center;
+    padding-top: 160px;
+}
+.footer{
+    grid-area: footer;
+    text-align: center;
+    background-color: #32e0c4;
+    color: #ffffff;
+    padding: 10px;
+    margin: 20px;
+}
+
+@media (min-width: 736px){
+    body{
+        font-size: 1.7em;
+    }
+    .grid-container{
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
+        grid-template-rows: auto;
+        grid-template-areas: 
+        "header header header header header header header"
+        "navbar main main main main sidebar sidebar"
+        "footer footer footer footer footer footer footer";
+        grid-gap: 10px;
+        background-color: #eeeeee;
+        padding: 10px;
+    }
+}
